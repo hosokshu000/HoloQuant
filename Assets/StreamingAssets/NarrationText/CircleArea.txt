@@ -1,0 +1,39 @@
+1
+The circle area formula states that the area of a circle with radius r is πr<sup>2</sup>, but how does this actually work?
+ 
+2
+First let’s define π. π is a mathematical constant with an approximate value of 3.14159 that represents the ratio of a circle’s diameter to its circumference.
+ 
+3
+To put simply, multiplying the diameter of a circle – 2 times its radius r – by π yields its circumference 2πr, the length of the line that “wraps around” the circle.\This is the definition of π for any circle with radius r.
+ 
+4
+Now that we know what π is, let's begin breaking down the circle area formula. For the ease of explanation, this circle's radius will be referred to as "r" onward.
+ 
+5
+If the circle is sliced into 8 pieces like this, the resulting sectors, or "pizza slices," could be rearranged into a parallelogram-like shape.
+ 
+6
+The bottom "edge" length, denoted by the dark blue line, is formed by the arc lengths from exactly half of the sectors that made up the original circle.\Therefore, it's πr, half of the original circle's circumference.\The "height" -- although diagonal right now -- can be approximated as r, as each sector's straight edge is the original circle's radius.
+ 
+7
+However, it's still difficult to get the area of this shape, so let's return to the circle.\Keep in mind that the shape created has the same area as the circle -- we simply rearranged its sectors.
+ 
+8
+Notice that if the circle is sliced into 16 slices and the same rearrangement is performed, the resulting shape is closer to a parallelogram.\More importantly, its bottom edge length is still πr and its height is still approximately r.
+ 
+9
+If the circle is sliced even more into 64 slices, the rearranged shape begins to look like a rectangle.\At this point, the bottom edge is essentially a straight line of length πr and the height is very close to r.
+ 
+10
+At 256 slices, the rearranged shape becomes indistinguishable from a rectangle.\Theoretically, slicing the circle into infinitely many slices and performing the rearrangement would yield a rectangle with a width of exactly πr and height of exactly r.
+ 
+11
+Now that this shape is essentially a rectangle, let's think about the circle area formula again.\Recall that the area of a rectangle can be expressed as the product of its height and width.
+ 
+12
+In this case, the height would be r and the width would be πr. Thus, when multiplied and simplified, the area of this rectangle can be expressed as πr<sup>2</sup>.\Does this look familiar? It's identical to the circle area formula!
+ 
+13
+Finally, let's not forget that this rectangle has the same area as the original circle; we simply rearranged sectors that were formed from slicing the circle.\And this is why a circle with a radius r has an area of πr<sup>2</sup>!
+ 
