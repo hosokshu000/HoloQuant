@@ -9,4 +9,20 @@ public class URLOpener : MonoBehaviour
      {
          Application.OpenURL(link);
      }
+
+     public void OpenGmail()
+     {
+        #if UNITY_IOS
+            try
+            {
+                // Open Gmail app
+                Application.OpenURL("googlegmail:///co?to=holoquant.app@gmail.com");
+            }
+            catch
+            {
+                // If Gmail app is not installed, open App Store
+                Application.OpenURL("https://apps.apple.com/app/gmail-email-by-google/id422689480");
+            }
+        #endif
+     }
 }
