@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tap to place the animation at the desired position.
+  m_text: Tap to place the animation at the desired surface.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cea0495619d3548fab405945429263d2, type: 2}
   m_sharedMaterial: {fileID: 3403895681981860134, guid: cea0495619d3548fab405945429263d2, type: 2}
@@ -1862,7 +1862,6 @@ MonoBehaviour:
   nextButton: {fileID: 643677739}
   backButton: {fileID: 729199487}
   endScreenAnimator: {fileID: 606738214}
-  slider: {fileID: 69269992}
 --- !u!114 &479257852
 MonoBehaviour:
   m_ObjectHideFlags: 0
