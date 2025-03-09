@@ -43,6 +43,8 @@ public class SliderUtils : MonoBehaviour
 
         slider.value = closestSnapValue;
         label.text = slider.value.ToString();
+
+        snapValues = new float[] {0.5f, 0.75f, 1.0f, 1.25f, 1.5f, 1.75f, 2.0f};
     }
 
     public void SetAnimationSpeed()
@@ -77,6 +79,15 @@ public class SliderUtils : MonoBehaviour
 
     public void SetScale()
     {
+        // For scale, dynamically generate the snapValues array based on the slider's min and max values -  they are tentative
+
+        snapValues = new float[(int)((slider.maxValue - slider.minValue) / 0.5 + 1)];
+
+        for (int i = 0; i < snapValues.Length; i++)
+        {
+            snapValues[i] = slider.minValue + i * 0.5f;
+        }
+
         if (ARCursor.actualObj != null && ARCursor.shadowObj != null)
         {
             actualObj = ARCursor.actualObj;
