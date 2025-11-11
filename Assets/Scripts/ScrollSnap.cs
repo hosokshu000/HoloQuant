@@ -46,4 +46,37 @@ public class ScrollSnap : MonoBehaviour
             isSnapped = false;
         }
     }
+
+    public void ScrollBy(int direction)
+    {
+        // direction = +1 for next, -1 for previous
+        int currentItem = Mathf.RoundToInt(-contentPanel.localPosition.x / (sampleListItem.rect.width + HLG.spacing));
+
+        int itemCount = contentPanel.childCount;
+        int nextItem = (currentItem + direction + itemCount) % itemCount; // wraps around both ends
+
+        StopAllCoroutines(); // stop any previous scroll animation
+        StartCoroutine(SmoothScrollTo(nextItem));
+    }
+
+    private IEnumerator SmoothScrollTo(int targetIndex)
+    {
+        float targetX = -targetIndex * (sampleListItem.rect.width + HLG.spacing);
+        float duration = 0.3f;
+        float time = 0f;
+        Vector3 startPos = contentPanel.localPosition;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            contentPanel.localPosition = new Vector3(
+                Mathf.Lerp(startPos.x, targetX, time / duration),
+                startPos.y,
+                startPos.z
+            );
+            yield return null;
+        }
+
+        contentPanel.localPosition = new Vector3(targetX, startPos.y, startPos.z);
+    }
 }

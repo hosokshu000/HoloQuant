@@ -29,6 +29,7 @@ public class ARCursor : MonoBehaviour
     void Start()
     {
         cursorChildObject.SetActive(useCursor);
+        Input.gyro.enabled = true;
     }
 
     void Update()
@@ -46,10 +47,11 @@ public class ARCursor : MonoBehaviour
                 return;
             }
 
-            Vector3 positionOffset = new Vector3(0, 0.02f, 0); // Default offset for position
-            Vector3 rotationOffset = new Vector3(90, 0, 0); // Default offset for rotation
+            Vector3 positionOffset = new Vector3(0, 0.02f, 0);
 
-            Quaternion adjustedRotation = Quaternion.Euler(transform.rotation.eulerAngles + rotationOffset);
+            float currentYaw = Camera.main.transform.eulerAngles.z;
+            XcodeLog("Current Yaw: " + currentYaw);
+            Quaternion adjustedRotation = Quaternion.Euler(90f, -currentYaw, 0f); // x offset & yaw offset
 
             if (useCursor)
             {
@@ -116,11 +118,9 @@ public class ARCursor : MonoBehaviour
     [Conditional("UNITY_IOS")]
     private void XcodeLog(string message)
     {
-        // This will appear in Xcode's console
         UnityEngine.iOS.Device.SetNoBackupFlag(Application.persistentDataPath + "/XcodeLog.txt");
         System.IO.File.AppendAllText(Application.persistentDataPath + "/XcodeLog.txt", message + "\n");
         
-        // This will still appear in Unity's console during development
         UnityEngine.Debug.Log(message);
     }
 }

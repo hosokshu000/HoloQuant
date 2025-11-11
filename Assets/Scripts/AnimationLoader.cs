@@ -145,11 +145,9 @@ public class AnimationLoader : MonoBehaviour
     [Conditional("UNITY_IOS")]
     private void XcodeLog(string message)
     {
-        // This will appear in Xcode's console
         UnityEngine.iOS.Device.SetNoBackupFlag(Application.persistentDataPath + "/XcodeLog.txt");
         System.IO.File.AppendAllText(Application.persistentDataPath + "/XcodeLog.txt", message + "\n");
         
-        // This will still appear in Unity's console during development
         UnityEngine.Debug.Log(message);
     }
 }

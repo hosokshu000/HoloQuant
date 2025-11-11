@@ -3,8 +3,8 @@ using System.Diagnostics;
 
 public class CustomQuad : MonoBehaviour
 {
-    public float width = 1f;  // Desired width
-    public float height = 1f; // Desired height
+    public float width = 1f;
+    public float height = 1f;
     void Start()
     {
         MeshFilter meshFilter = GetComponent<MeshFilter>();

@@ -40,7 +40,6 @@ public class FullscreenButtonController : MonoBehaviour
             elapsed += Time.deltaTime;
             float t = elapsed / duration;
 
-            // Smooth transition using Lerp
             topBar.anchoredPosition = Vector3.Lerp(initialTopPosition, targetTopPosition, t);
             bottomBar.anchoredPosition = Vector3.Lerp(initialBottomPosition, targetBottomPosition, t);
 

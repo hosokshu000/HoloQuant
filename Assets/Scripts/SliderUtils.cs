@@ -79,8 +79,6 @@ public class SliderUtils : MonoBehaviour
 
     public void SetScale()
     {
-        // For scale, dynamically generate the snapValues array based on the slider's min and max values -  they are tentative
-
         snapValues = new float[(int)((slider.maxValue - slider.minValue) / 0.5 + 1)];
 
         for (int i = 0; i < snapValues.Length; i++)
@@ -116,11 +114,9 @@ public class SliderUtils : MonoBehaviour
     [Conditional("UNITY_IOS")]
     private void XcodeLog(string message)
     {
-        // This will appear in Xcode's console
         UnityEngine.iOS.Device.SetNoBackupFlag(Application.persistentDataPath + "/XcodeLog.txt");
         System.IO.File.AppendAllText(Application.persistentDataPath + "/XcodeLog.txt", message + "\n");
         
-        // This will still appear in Unity's console during development
         UnityEngine.Debug.Log(message);
     }
 }

@@ -64,7 +64,7 @@ public class FadeIn : MonoBehaviour
 
     IEnumerator ActivateAndFade(bool backButton)
     {
-        // Wait for the specified delay
+        // Wait for delay
         yield return new WaitForSeconds(delay);
 
         // Fade in obj over the duration

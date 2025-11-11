@@ -28,7 +28,7 @@ public class LessonNarrator : MonoBehaviour
         contArrow.SetActive(false);
         textBox = tbObj.GetComponent<TextMeshProUGUI>();
         fullPath = Path.Combine(Application.streamingAssetsPath, "NarrationText", lessonPath);
-        textBox.text = ""; // Initially store an empty string
+        textBox.text = "";
     }
 
     public void ChangeLesson(string newName)
@@ -102,13 +102,13 @@ public class LessonNarrator : MonoBehaviour
                     contArrow.SetActive(false);
                     textBox.text = "";
                 }
-                else if (s[i] == '<') // Detecting rich text tags
+                else if (s[i] == '<')
                 {
                     int tagEnd = s.LastIndexOf('>');
-                    if (tagEnd != -1) // If a valid tag is found
+                    if (tagEnd != -1)
                     {
                         string richTextTag = s.Substring(i, tagEnd - i + 1);
-                        textBox.text += richTextTag; // Add the whole tag at once
+                        textBox.text += richTextTag;
                         i = tagEnd;
                         continue;
                     }
@@ -133,11 +133,9 @@ public class LessonNarrator : MonoBehaviour
     [Conditional("UNITY_IOS")]
     private void XcodeLog(string message)
     {
-        // This will appear in Xcode's console
         UnityEngine.iOS.Device.SetNoBackupFlag(Application.persistentDataPath + "/XcodeLog.txt");
         System.IO.File.AppendAllText(Application.persistentDataPath + "/XcodeLog.txt", message + "\n");
         
-        // This will still appear in Unity's console during development
         UnityEngine.Debug.Log(message);
     }
 }

@@ -1348,7 +1348,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1080599312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 75547775}
+        m_TargetAssemblyTypeName: ScrollSnap, Assembly-CSharp
+        m_MethodName: ScrollBy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1097486103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,7 +1658,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1327320745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 75547775}
+        m_TargetAssemblyTypeName: ScrollSnap, Assembly-CSharp
+        m_MethodName: ScrollBy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1380512653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,7 +2231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Swipe to select lesson
+  m_text: Select Lesson
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cea0495619d3548fab405945429263d2, type: 2}
   m_sharedMaterial: {fileID: 3403895681981860134, guid: cea0495619d3548fab405945429263d2, type: 2}

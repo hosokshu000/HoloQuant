@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SplashScreenController : MonoBehaviour
 {
-    public Image fadePanel; // Assign this in the Inspector
-    public Image splashImage; // Assign this in the Inspector
+    public Image fadePanel;
+    public Image splashImage;
     public float fadeDuration = 1f;
-    public string nextSceneName = "Main Menu"; // Name of the home scene
+    public string nextSceneName = "Main Menu";
 
     void Start()
     {
@@ -17,16 +17,12 @@ public class SplashScreenController : MonoBehaviour
 
     IEnumerator PlaySplashScreen()
     {
-        // Fade-in effect
         yield return StartCoroutine(Fade(fadePanel, 1, 0));
 
-        // Wait for a few seconds (or as long as needed)
         yield return new WaitForSeconds(2f);
 
-        // Fade-out effect
         yield return StartCoroutine(Fade(fadePanel, 0, 1));
 
-        // Load the next scene
         SceneManager.LoadScene(nextSceneName);
     }
 
