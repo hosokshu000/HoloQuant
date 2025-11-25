@@ -50,7 +50,6 @@ public class ARCursor : MonoBehaviour
             Vector3 positionOffset = new Vector3(0, 0.02f, 0);
 
             float currentYaw = Camera.main.transform.eulerAngles.z;
-            XcodeLog("Current Yaw: " + currentYaw);
             Quaternion adjustedRotation = Quaternion.Euler(90f, -currentYaw, 0f); // x offset & yaw offset
 
             if (useCursor)
