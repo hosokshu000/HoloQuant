@@ -160,3 +160,11 @@ button:hover {
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
+
+.section-divider {
+    border: 0;
+    height: 2px;
+    background: #000000;
+    margin: 60px auto;      
+    max-width: 800px;         
+}
