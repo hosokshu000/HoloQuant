@@ -163,7 +163,7 @@ button:hover {
 
 .section-divider {
     border: 0;
-    height: 2px;
+    height: 5px;
     background: #000000;
     margin: 60px auto;      
     max-width: 800px;         
