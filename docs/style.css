@@ -46,8 +46,8 @@ body {
 
 .mission-container {
     display: flex;
-    margin-left: 200px;
-    gap: 100px;
+    margin-left: 500px;
+    gap: 200px;
     padding: 80px 40px;
     max-width: 1200px;
     margin: auto;
