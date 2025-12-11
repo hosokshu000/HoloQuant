@@ -1,4 +1,3 @@
-// Credits to https://www.youtube.com/watch?v=t0erLB3VPiU
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
